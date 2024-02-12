@@ -27,7 +27,7 @@ if(isset($domainName)){
 	{
 		$output = "";
 		fputs($whoisInfo,"$domainName\r\n");
-		while(!feof($whoisInfo))    //چک می‌کند که به آخر فایل رسیده یا نه
+		while(!feof($whoisInfo))
 			$output .= fgets($whoisInfo,128);
 		fclose($whoisInfo);
 	}else{$error = 'This domain is wrong or not supported!';}
